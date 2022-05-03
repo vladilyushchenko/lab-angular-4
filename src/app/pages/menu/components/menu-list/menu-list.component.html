@@ -1,0 +1,13 @@
+<ul class="list-group" style="margin: 0 32px 32px 32px">
+  <ng-container *ngFor="let dish of menu; let index = index">
+    <li class="list-group-item p-3 text-dark"
+        [class.active]="index == activeItem"
+        (click)="onItemClick(index)"
+    >
+      <b>{{dish.name}}</b>
+    </li>
+    <li class="list-group-item p-1" *ngIf="activeItem === index">
+      <menu-details [dish]="dish"></menu-details>
+    </li>
+  </ng-container>
+</ul>

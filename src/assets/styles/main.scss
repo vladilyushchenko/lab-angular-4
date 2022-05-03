@@ -1,0 +1,18 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: rgb(0, 117, 74);
+  --second-bg-color: #d4e9e2;
+  --dark-bg-color: #1e3932;
+  --dark-color: #0a0a0a;
+}

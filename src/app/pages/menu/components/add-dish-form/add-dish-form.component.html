@@ -1,0 +1,47 @@
+<div class="p-4 mb-4 bg-light border">
+  <div class="container-fluid py-2">
+    <h1 class="display-6 fw-bold">Add a new position to the menu</h1>
+    <div class="form row g-3 needs-validation" [formGroup]="form" novalidate>
+      <div class="col">
+        <label class="form-label">Name: </label>
+        <input
+          type="text"
+          formControlName="name"
+          class="form-control"
+          [class.is-invalid]="form.controls.name.invalid && form.controls.name.dirty"
+        />
+        <div class="invalid-feedback">Invalid name value</div>
+      </div>
+
+      <div class="col">
+        <label class="form-label">Description: </label>
+        <input
+          type="text"
+          formControlName="description"
+          class="form-control"
+          [class.is-invalid]="form.controls.description.invalid && form.controls.description.dirty"
+        />
+        <div class="invalid-feedback">Invalid description value</div>
+      </div>
+
+      <div class="col">
+        <label class="form-label">Price:</label>
+        <input
+          type="number"
+          formControlName="price"
+          class="form-control"
+          [class.is-invalid]="form.controls.price.invalid && form.controls.price.dirty"
+        />
+        <div class="invalid-feedback">Invalid price value</div>
+      </div>
+
+      <div class="row-auto" style="margin-top: 16px">
+        <button class="btn btn-dark text-uppercase" (click)="addNewDish()" [disabled]="form.invalid">
+          Add position
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
